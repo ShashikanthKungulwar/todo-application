@@ -116,7 +116,8 @@ input[type="date"] {
 }
 
 .tasks-container .task .category {
-    background-color: red;
+    width: 100px;
+    text-align: center;
     color: white;
     padding-inline: 15px;
     padding-block: 6px;
@@ -129,4 +130,42 @@ input[type="date"] {
 .tasks-container .task .date-holder {
     font-size: 0.8em;
     padding-left: 26.5px;
+}
+
+.work
+{
+    background-color: blue;
+}
+
+.personal
+{
+    background-color:darkslategrey;
+
+}
+
+.school
+{
+    background-color: blueviolet;
+}
+
+
+.other
+{
+    background-color: darkolivegreen;
+}
+
+.cleaning
+{
+    background-color: deepskyblue;
+}
+
+.choose
+{
+    display: none;
+}
+
+input[type="checkbox"]
+{
+    height: 12px;
+    aspect-ratio: 1/1;
 }

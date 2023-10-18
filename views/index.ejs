@@ -10,60 +10,70 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="todo-container">
-            <div>
-                <h1>TODO App</h1>
-            </div>
-            <hr>
-            <div class="input-container focus-effect">
-                <label>DESCRIPTION</label>
-                <input type="text" id="description" placeholder="What do you need to do?" />
-            </div>
-            <hr>
-            <div class="two-children " style="padding: 0px;">
-                <div class="focus-effect">
-                    <label>CATEGORY</label>
-                    <select>
-                        <option>choose a category</option>
-                        <option>personal</option>
-                        <option>work</option>
-                        <option>school</option>
-                        <option>cleaning</option>
-                        <option>other</option>
-                    </select>
+    <form method="post">
+        <div class="container">
+            <div class="todo-container">
+                <div>
+                    <h1>TODO App</h1>
                 </div>
-                <div class="focus-effect">
-                    <label>DUE DATE</label>
-                    <input type="date" />
-                </div>
-            </div>
-            <hr>
-            <div class="buttons-container">
-                <button class="buttons" style="background-color: hsl(240deg 1.45% 27.06%);"><i class="fa-solid fa-plus"
-                        style="color: #fcfcfd;"></i> ADD TASK</button>
-                <button class="buttons" style="background-color:hsl(5.05deg 86.32% 54.12%) ;"><i
-                        class="fa-solid fa-trash" style="color: #f7f7f7;"></i> DELETE TASKS</button>
-            </div>
-
-
-            <div class="tasks-container">
                 <hr>
-                <div class="task">
-                    <span>
-
-                        <span><input type="checkbox" name="" id="">&nbsp;&nbsp;Annual report submition
-                            deadline</span><br>
-                        <span class="date-holder"><i class="fa-solid fa-calendar-days"></i> JUN 1,2019</span>
-                    </span>
-                    <span class="category">work</span>
+                <div class="input-container focus-effect">
+                    <label>DESCRIPTION</label>
+                    <input type="text" name="text" id="description" placeholder="What do you need to do?" required />
                 </div>
+                <hr>
+                <div class="two-children " style="padding: 0px;">
+                    <div class="focus-effect">
+                        <label>CATEGORY</label>
+                        <select name="category">
+                            <option>choose a category</option>
+                            <option>personal</option>
+                            <option>work</option>
+                            <option>school</option>
+                            <option>cleaning</option>
+                            <option>other</option>
+                        </select>
+                    </div>
+                    <div class="focus-effect">
+                        <label>DUE DATE</label>
+                        <input type="date" required name="date" />
+                    </div>
+                </div>
+                <hr>
+                <div class="buttons-container">
+                    <button formaction="form/add-item" class="buttons"
+                        style="background-color: hsl(240deg 1.45% 27.06%);"><i class="fa-solid fa-plus"
+                            style="color: #fcfcfd;"></i> ADD TASK</button>
+                    <a href="/form/delete-items?arr"><button type="button" class="buttons"
+                        style="background-color:hsl(5.05deg 86.32% 54.12%) ;"><i class="fa-solid fa-trash"
+                            style="color: #f7f7f7;"></i> DELETE TASKS</button></a>
+                </div>
+
+
+                <div class="tasks-container">
+
+
+                    <% for(let todo of todos) {%>
+                        <hr>
+                        <div class="task">
+                            <span>
+                                <span><input type="checkbox" data-id="<%= todo.id %>">&nbsp;&nbsp;<%= todo.text %></span><br>
+                                <span class="date-holder"><i class="fa-solid fa-calendar-days"></i>
+                                    <%= todo.date %>
+                                </span>
+                            </span>
+
+
+                            <span class="category <%= todo.category %>">
+                                <%= todo.category %>
+                            </span>
+                        </div>
+                        <% } %>
+                </div>
+
             </div>
-
-
-
         </div>
-    </div>
+    </form>
     <script type="text/javascript" src="./js/index.js"></script>
 </body>
 

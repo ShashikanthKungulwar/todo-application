@@ -7,5 +7,5 @@ const todosSchema=new mongoose.Schema({
 })
 
 
-const Todo=mongoose.model('Todo',todosSchema);
-module.exports=Todo;
+const Todos=mongoose.model('Todo',todosSchema);
+module.exports=Todos;
