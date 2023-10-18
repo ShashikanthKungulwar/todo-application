@@ -1,0 +1,132 @@
+html,
+body {
+    margin: 0px;
+}
+
+* {
+    box-sizing: border-box;
+    color: #626262;
+    font-family: sans-serif;
+}
+
+.todo-container>div {
+    padding-block: 10px;
+
+}
+
+.container {
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #626262;
+}
+
+.todo-container {
+    width: 50%;
+    height: fit-content;
+    background-color: white;
+    margin-left: 10px;
+}
+
+.todo-container>div {
+    margin-left: 10px;
+}
+
+.todo-container>div:first-child {
+    text-align: center;
+}
+
+.todo-container hr {
+    opacity: 0.5;
+    margin: 0px;
+}
+
+select {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+
+input[type="date"] {
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+.input-container input {
+    width: 100%;
+    height: 100%;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    /* padding: 10px; */
+}
+
+.focus-effect:focus-within {
+    background-color: #b4b4b4;
+    margin: 0px;
+}
+
+.two-children div {
+    display: inline-block;
+    width: 49%;
+    height: 100%;
+    padding-block: 20px;
+}
+
+.two-children>div:first-child {
+    border-right: rgba(98, 98, 98, 0.4) solid 0.1px;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+    margin-left: 0px !important;
+}
+
+.buttons-container .buttons {
+    color: white;
+    width: 200px;
+    aspect-ratio: 4/1;
+    font-size: large;
+    border: none;
+}
+
+.tasks-container {
+    margin-inline: 15px;
+    padding-bottom: 20px;
+}
+
+.tasks-container .task {
+    height: 50px;
+    position: relative;
+}
+
+.tasks-container .task span:first-child {
+    width: 70%;
+}
+
+.tasks-container .task .category {
+    background-color: red;
+    color: white;
+    padding-inline: 15px;
+    padding-block: 6px;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tasks-container .task .date-holder {
+    font-size: 0.8em;
+    padding-left: 26.5px;
+}
