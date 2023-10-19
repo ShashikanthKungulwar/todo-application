@@ -9,11 +9,7 @@ body {
     font-family: sans-serif;
 }
 
-.todo-container>div {
-    padding-block: 10px;
-
-}
-
+/* main contianer div syling */
 .container {
     height: 100vh;
     overflow-y: auto;
@@ -22,6 +18,7 @@ body {
     background-color: #626262;
 }
 
+/* todo container styling */
 .todo-container {
     width: 50%;
     height: fit-content;
@@ -29,35 +26,26 @@ body {
     margin-left: 10px;
 }
 
+
+/* styling for the divs inside todo-container direct children */
 .todo-container>div {
+    padding-block: 10px;
     margin-left: 10px;
 }
 
+
+
+/* only for the first child  */
 .todo-container>div:first-child {
     text-align: center;
 }
 
+/* styling for hrs */
 .todo-container hr {
     opacity: 0.5;
     margin: 0px;
 }
 
-select {
-    appearance: none;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    width: 100%;
-}
-
-
-input[type="date"] {
-    appearance: none;
-    border: none;
-    outline: none;
-    width: 100%;
-    background-color: transparent;
-}
 
 .input-container input {
     width: 100%;
@@ -69,11 +57,14 @@ input[type="date"] {
     /* padding: 10px; */
 }
 
+/* on focusing update of parent element */
 .focus-effect:focus-within {
     background-color: #b4b4b4;
     margin: 0px;
 }
 
+
+/* div for data and select styling */
 .two-children div {
     display: inline-block;
     width: 49%;
@@ -85,6 +76,28 @@ input[type="date"] {
     border-right: rgba(98, 98, 98, 0.4) solid 0.1px;
 }
 
+select {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 100%;
+}
+
+
+
+input[type="date"] {
+    appearance: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: transparent;
+}
+
+
+
+
+/* buttons div styling  */
 .buttons-container {
     display: flex;
     justify-content: center;
@@ -101,6 +114,8 @@ input[type="date"] {
     border: none;
 }
 
+
+/* tasks container styling */
 .tasks-container {
     margin-inline: 15px;
     padding-bottom: 20px;
@@ -132,40 +147,33 @@ input[type="date"] {
     padding-left: 26.5px;
 }
 
-.work
-{
+.work {
     background-color: blue;
 }
 
-.personal
-{
-    background-color:darkslategrey;
+.personal {
+    background-color: darkslategrey;
 
 }
 
-.school
-{
+.school {
     background-color: blueviolet;
 }
 
 
-.other
-{
+.other {
     background-color: darkolivegreen;
 }
 
-.cleaning
-{
+.cleaning {
     background-color: deepskyblue;
 }
 
-.choose
-{
+.choose {
     display: none;
 }
 
-input[type="checkbox"]
-{
+input[type="checkbox"] {
     height: 12px;
     aspect-ratio: 1/1;
 }

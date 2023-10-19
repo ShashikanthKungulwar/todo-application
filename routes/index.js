@@ -1,8 +1,9 @@
-const express=require('express');
-const homeController=require('../controllers/homeController');
-const router=express.Router();
-router.use(express.urlencoded());
+const express = require('express');
+const router = express.Router()
 
-router.get('/',homeController.home);
-router.use("/form",require("./formRoutes"));
-module.exports=router;
+const homeController = require('../controllers/homeController');
+router.use(express.urlencoded());//to parse the req to json to access 
+
+router.get('/', homeController.home);
+router.use("/form", require("./formRoutes"));  //to handle other routes
+module.exports = router;
